@@ -14,6 +14,13 @@ It compresses images by recursively subdividing regions with high detail, encodi
 - ✅ **Configurable Parameters** – set number of iterations and detail error threshold.  
 
 ---
+## 📸 Example (Before vs After)
+
+| Original Image        | Compressed & Reconstructed |
+|----------------------|----------------------------|
+| ![Original](input/download.jpg) | ![Reconstructed](output/rec_download.jpg) |
+
+
 
 ## 📂 Project Structure
 ```bash
@@ -120,14 +127,6 @@ RGB values for leaf nodes
 The binary blob is compressed with LZMA for storage.
 
 During reconstruction, the binary data is decoded and the QuadTree is redrawn.
-
-## 📸 Example (Before vs After)
-
-| Original Image        | Compressed & Reconstructed |
-|----------------------|----------------------------|
-| ![Original](input/download.jpg) | ![Reconstructed](output/rec_download.jpg) |
-
-
 	
 ## 🛠️ Future Improvements
 
