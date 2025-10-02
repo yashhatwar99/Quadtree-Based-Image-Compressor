@@ -9,7 +9,7 @@ class ImageCompressor:
     """ Helper class that manages the CompressNodes and allows you to incrementally add detail. """
 
     def __init__(self, image_data: np.array):
-        self.areas = SortedListWithKey(key=lambda node: node.detail)
+        self.areas = SortedListWithKey(key=lambda node: node.detail)#priority queue
         self._image_shape = image_data.shape
         self.height, self.width, _ = self._image_shape
 

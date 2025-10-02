@@ -53,7 +53,7 @@ def compute_image_similarity(image_a: np.array, image_b: np.array) -> float:
     return 1 - mean_average_error(image_a, image_b) / 255
 
 
-def compute_mean_local_entropy(image: np.array, radius=5) -> float:
+def compute_mean_local_entropy(image: np.array, radius=5) -> float:  #grayscale
     gray = (rgb2gray(image) * 255).astype(np.uint8)
     local_entropy = sk_entropy(gray, sk_disk(radius))
     entropy = np.mean(local_entropy)

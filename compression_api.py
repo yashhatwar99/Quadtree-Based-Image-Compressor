@@ -15,7 +15,7 @@ def compress_and_encode_image_data(
     return compressor.encode_to_binary()
 
 
-def compress_image_file(
+def compress_image_file(#lzma
         image_path: str,
         output_path: str,
         iterations: int = 20000,

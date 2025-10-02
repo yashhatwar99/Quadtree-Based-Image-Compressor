@@ -54,13 +54,13 @@ class QuadTreeNode:
 
         return self.bottom_left_node, self.bottom_right_node, self.top_left_node, self.top_right_node
 
-    def draw(self, image_data: np.array):
+    def draw(self, image_data: np.array):#to recreate image
         if self.is_subdivided:
             self.bottom_left_node.draw(image_data)
             self.bottom_right_node.draw(image_data)
             self.top_left_node.draw(image_data)
             self.top_right_node.draw(image_data)
-        else:
+        else:#rootnode
             self.draw_self(image_data)
 
     def draw_self(self, image_data: np.array):
